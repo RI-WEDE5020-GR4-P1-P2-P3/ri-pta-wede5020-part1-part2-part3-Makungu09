@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Mhlongo  Fresh Bakery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Contact & Pickup</h2>
+  <p><b>Address:</b> 42 Agatha Street, Tzaneen CBD, Limpopo</p>
+  <p><b>Phone/WhatsApp:</b> 067 782 5477</p>
+  <p><b>Hours:</b> Mon-Sat 6:00 - 17:00 | Sunday Closed</p>
+
+  <h3>Pre-Order with Pickup Slot</h3>
+  <form onsubmit="sendWhatsApp(event, 'pickup')">
+    <input type="text" placeholder="Your Name" required>
+    <select required>
+      <option value="">Select Pickup Time</option>
+      <option>7:00 - 8:00</option>
+      <option>10:00 - 11:00</option>
+      <option>14:00 - 15:00</option>
+    </select>
+    <textarea placeholder="Your Order"></textarea>
+    <button class="btn" type="submit">Pre-Order on WhatsApp</button>
+  </form>
+
+  <p style="margin-top:15px;">Find us on <a href="https://maps.google.com" target="_blank">Google Maps</a></p>
+</section>
+
+<a href="https://wa.me/27677825477" class="whatsapp" target="_blank">WhatsApp Us</a>
+
+<script>
+function sendWhatsApp(e, type){
+  e.preventDefault();
+  let number = "27677825477"; 
+  let message = `Hi Mhlongo  Fresh Bakery! New ${type} request.`;
+  window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank');
+}
+</script>
+
+<footer>
+  <p>© 2026 Mhlongo Fresh Bakery | Proudly Local | Tzaneen, Limpopo</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title> Mhlongo Fresh Bakery | Proudly Using Local Produce</title> 
+<style> 
+
+  :root{ 
+    --mango: #F4A261; 
+    --green: #2A9D8F; 
+    --cream: #FFF8F0; 
+    --brown: #6D4C41; 
+  } 
+
+  *{box-sizing:border-box; margin:0; padding:0; font-family: Arial, sans-serif;} 
+
+  body{background: var(--cream); color: var(--brown);} 
+
+  header{background: var(--green); color:white; padding:15px; position:sticky; top:0;} 
+
+  nav{display:flex; justify-content:space-around; flex-wrap:wrap;} 
+
+  nav a{color:white; text-decoration:none; padding:8px; font-weight:bold;} 
+
+  .hero{background: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200') center/cover; color:white; text-align:center; padding:80px 20px;} 
+
+  .hero h1{font-size:2.2rem; text-shadow:2px 2px 4px #000;} 
+
+  .btn{background:var(--mango); color:white; padding:12px 20px; border:none; border-radius:8px; text-decoration:none; display:inline-block; margin-top:10px; font-weight:bold;} 
+
+  section{padding:40px 20px; max-width:1000px; margin:auto;} 
+
+  h2{color:var(--green); margin-bottom:15px; text-align:center;} 
+
+  .menu-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:15px;} 
+
+  .card{background:white; border-radius:10px; padding:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);} 
+
+  .card img{width:100%; border-radius:8px;} 
+
+  form{display:flex; flex-direction:column; gap:10px; background:white; padding:20px; border-radius:10px;} 
+
+  input, textarea, select{padding:10px; border:1px solid #ccc; border-radius:6px; width:100%;} 
+
+  footer{background:var(--brown); color:white; text-align:center; padding:20px;} 
+
+  .whatsapp{position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:12px 16px; border-radius:50px; text-decoration:none; font-weight:bold;} 
+
+</style> 
+</head> 
+<body> 
+<header> 
+  <nav> 
+    <a href="#home">Home</a> 
+    <a href="#menu">Menu</a> 
+    <a href="#orders">Custom Orders</a> 
+    <a href="#catering">Catering</a> 
+    <a href="#about">About</a> 
+    <a href="#contact">Contact</a> 
+  </nav> 
+</header> 
+<section id="home" class="hero"> 
+  <h1>Mhlongo Fresh Bakery</h1> 
+  <p>Fresh Bread and Cakes made with Tzaneen Mangoes & Macadamias</p> 
+  <a href="#menu" class="btn">Order for Pickup in Tzaneen</a> 
+</section> 
+<section id="menu"> 
+  <h2>Our Menu</h2> 
+  <div class="menu-grid"> 
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=600" alt="Bread"> 
+      <h3>Farmhouse Brown Bread</h3> 
+      <p>R18.00 - Fresh daily</p> 
+
+    </div> 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600" alt="Cake"> 
+      <h3>Tzaneen Mango Loaf</h3> 
+      <p>R45.00 - Made with local mangoes</p> 
+    </div> 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=600" alt="Pastries"> 
+
+      <h3>Macadamia Tart</h3> 
+
+      <p>R35.00 - Local macadamias</p> 
+
+    </div> 
+  </div> 
+</section> 
+<section id="orders"> 
+  <h2>Custom Orders</h2> 
+  <form onsubmit="sendWhatsApp(event, 'order')"> 
+    <input type="text" id="name" placeholder="Your Name" required> 
+    <input type="tel" id="phone" placeholder="WhatsApp Number" required> 
+    <select id="type" required> 
+      <option value="">Select Order Type</option> 
+      <option>Birthday Cake</option> 
+      <option>Wedding Cake</option> 
+      <option>Cupcakes</option> 
+    </select> 
+    <input type="date" id="date" required> 
+    <textarea id="details" placeholder="Cake design, flavors, upload reference photo description"></textarea> 
+    <button class="btn" type="submit">Send Order via WhatsApp</button> 
+  </form> 
+</section> 
+<section id="catering"> 
+  <h2>Catering Packages</h2> 
+  <div class="menu-grid"> 
+    <div class="card"> 
+      <h3>School Event Package</h3> 
+      <p>100 x Scones + Juice - R1200</p> 
+    </div> 
+    <div class="card"> 
+      <h3>Funeral Catering</h3> 
+      <p>200 x Sliced Bread + Tea - R900</p> 
+    </div> 
+    <div class="card"> 
+      <h3>Wedding Package</h3> 
+      <p>Custom cake + 150 pastries - POA</p> 
+    </div> 
+  </div> 
+  <form onsubmit="sendWhatsApp(event, 'catering')" style="margin-top:20px;"> 
+    <input type="text" placeholder="Organization/Event Name" required> 
+    <input type="date" required> 
+    <button class="btn" type="submit">Request Catering Quote</button> 
+  </form> 
+</section> 
+<section id="about"> 
+  <h2>About Us</h2> 
+  <p>Family owned in Tzaneen CBD since 2025. We’re proud to use fresh produce from Tzaneen farms - mangoes, macadamias, and more. Come taste the flavor of Limpopo in every bite.</p> 
+</section> 
+<section id="contact"> 
+  <h2>Contact & Pickup</h2> 
+  <p><b>Address:</b> 42 Agatha Street, Tzaneen CBD, Limpopo</p> 
+  <p><b>Hours:</b> Mon-Sat 6:00 - 17:00</p> 
+  <h3>Pre-Order with Pickup Slot</h3> 
+  <form onsubmit="sendWhatsApp(event, 'pickup')"> 
+    <input type="text" placeholder="Your Name" required> 
+    <select required> 
+      <option value="">Select Pickup Time</option> 
+      <option>7:00 - 8:00</option> 
+      <option>10:00 - 11:00</option> 
+      <option>14:00 - 15:00</option> 
+    </select> 
+    <textarea placeholder="Your Order"></textarea> 
+    <button class="btn" type="submit">Pre-Order on WhatsApp</button> 
+  </form> 
+  <p style="margin-top:15px;">Or find us on <a href="https://maps.google.com" target="_blank">Google Maps</a></p> 
+
+</section> 
+<a href="https://wa.me/27677825477" class="whatsapp" target="_blank">WhatsApp Us</a> 
+<footer> 
+
+  <p>© 2026 Mhlongo Fresh Bakery | Proudly Local | Tzaneen, Limpopo</p> 
+
+</footer> 
+<script> 
+
+function sendWhatsApp(e, type){ 
+  e.preventDefault(); 
+  let number = "27677825477";  
+  let message = `Hi Mhlongo Fresh Bakery! New ${type} request.`; 
+  window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank'); 
+
+} 
+</script> 
+</body> 
+</html> 
+
+ 
