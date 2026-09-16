@@ -1,0 +1,39 @@
+# Changelog 
+All notable changes to Mhlongo Dzonga Fresh Bakery Website. 
+## [1.3.0] - 2026-09-10
+### Added 
+- Added Buyer Order Form on menu.html with fields: Full Name, What they want, How many items 
+- Added 6 different products on menu page using 5 different pictures + 1 sepia filter trick 
+- Added Testing Evidence section to README.md with Desktop, Tablet, Mobile screenshots 
+- Added order form JavaScript - auto-fill when clicking Order Now and shows confirmation message 
+- Added responsive testing screenshots in images folder 
+### Fixed 
+- Fixed layout to ensure images resize appropriately and do not overflow page (width:100%, object-fit:cover) 
+## [1.2.0] - 2026-09-15 
+### Added 
+- Implemented Desktop Layout requirements 
+- Added CSS Grid for menu-grid (3 columns desktop) 
+- Added Flexbox for navigation and header layout 
+### Fixed 
+- Implemented Responsive Design 
+- Added media queries and breakpoints: 
+    - Desktop: 3 columns (default) 
+    - Tablet: 2 columns @ 900px breakpoint 
+    - Mobile: 1 column @ 600px breakpoint 
+- Added relative units: %, fr, rem, vw 
+- Added hover, focus, active effects on buttons (scale and colour change) 
+- Improved typography and colour combinations (brown #3e2723, orange #ff8c00) 
+## [1.1.0] - 2026-09-09 
+### Added 
+- Added 5 pages: index.html, about.html, menu.html, services.html, contact.html 
+- Added images folder with bread.jpg, biscuits.jpg, mango.jpg, about.jpg, bg.jpg 
+- Added navigation linking all pages 
+- Added footer and hero sections 
+## [1.0.0] - 2026-09-05 
+### Added 
+
+- Initial project setup 
+
+- Created style.css with basic styling 
+
+- Created project folder structure WEB-DEV 
