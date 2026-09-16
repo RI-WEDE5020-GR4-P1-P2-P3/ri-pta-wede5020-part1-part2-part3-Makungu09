@@ -1,57 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Mhlongo  Fresh Bakery</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!DOCTYPE html> 
 
-<header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<html lang="en"> 
 
-<section>
-  <h2>Contact & Pickup</h2>
-  <p><b>Address:</b> 42 Agatha Street, Tzaneen CBD, Limpopo</p>
-  <p><b>Phone/WhatsApp:</b> 067 782 5477</p>
-  <p><b>Hours:</b> Mon-Sat 6:00 - 17:00 | Sunday Closed</p>
+<head> 
 
-  <h3>Pre-Order with Pickup Slot</h3>
-  <form onsubmit="sendWhatsApp(event, 'pickup')">
-    <input type="text" placeholder="Your Name" required>
-    <select required>
-      <option value="">Select Pickup Time</option>
-      <option>7:00 - 8:00</option>
-      <option>10:00 - 11:00</option>
-      <option>14:00 - 15:00</option>
-    </select>
-    <textarea placeholder="Your Order"></textarea>
-    <button class="btn" type="submit">Pre-Order on WhatsApp</button>
-  </form>
+<meta charset="UTF-8"> 
 
-  <p style="margin-top:15px;">Find us on <a href="https://maps.google.com" target="_blank">Google Maps</a></p>
-</section>
+<meta name="viewport" content="width=device-width,initial-scale=1"> 
 
-<a href="https://wa.me/27677825477" class="whatsapp" target="_blank">WhatsApp Us</a>
+<title>Contact - Mhlongo Dzonga Fresh Bakery</title> 
 
-<script>
-function sendWhatsApp(e, type){
-  e.preventDefault();
-  let number = "27677825477"; 
-  let message = `Hi Mhlongo  Fresh Bakery! New ${type} request.`;
-  window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank');
-}
-</script>
+<link rel="stylesheet" href="style.css"> 
 
-<footer>
-  <p>© 2026 Mhlongo Fresh Bakery | Proudly Local | Tzaneen, Limpopo</p>
-</footer>
-</body>
+</head> 
+
+<body> 
+
+ 
+
+<header> 
+
+<nav> 
+
+<a href="index.html">Home</a> 
+
+<a href="about.html">About Us</a> 
+
+<a href="menu.html">Menu</a> 
+
+<a href="services.html">Services</a> 
+
+<a href="contact.html" class="active">Contact</a> 
+
+</nav> 
+
+</header> 
+
+ 
+
+<section style="text-align:center"> 
+
+<h2>Contact Mhlongo Dzonga Fresh Bakery</h2> 
+
+<p><strong> Address:</strong> 42 Agatha Street, Tzaneen CBD, Limpopo 0850</p> 
+
+<p><strong> WhatsApp / Call:</strong> 067 782 5477</p> 
+
+<p><strong> Hours:</strong> Mon-Sat 6am-6pm | Sun 7am-1pm</p> 
+
+<br> 
+
+<a href="https://wa.me/27677825477?text=Hi%20Mhlongo%20Dzonga%20Fresh%20Bakery!" class="btn">Chat on WhatsApp Now</a> 
+
+ 
+
+<div style="margin-top:40px" class="menu-grid"> 
+
+<div class="card"><div class="card-content"><h3> Low-Data Ordering</h3><p>WhatsApp us - no app needed. We reply in 5 mins!</p></div></div> 
+
+<div class="card"><div class="card-content"><h3> Easy Payment</h3><p>Cash, EFT, or Cash on Delivery in Tzaneen CBD.</p></div></div> 
+
+<div class="card"><div class="card-content"><h3> 48hr Custom Orders</h3><p>Birthday & wedding cakes. Send your design on WhatsApp!</p></div></div> 
+
+</div> 
+
+ 
+
+</section> 
+
+ 
+
+<footer>© 2026 Mhlongo Dzonga Fresh Bakery | Proudly Family Business</footer> 
+
+</body> 
+
 </html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Menu - Mhlongo Dzonga Bakery</title> 
+
+<link rel="stylesheet" href="style.css"> 
+
+</head> 
+
+<body> 
+
+ 
+
+<header> 
+
+<nav> 
+
+<a href="index.html">Home</a> 
+
+<a href="about.html">About</a> 
+
+<a href="menu.html" class="active">Menu</a> 
+
+<a href="services.html">Services</a> 
+
+<a href="contact.html">Contact</a> 
+
+</nav> 
+
+</header> 
+
+ 
+
+<div class="hero about-hero"> 
+
+<h1>Our Fresh Menu</h1> 
+
+<p>6 Different Products - Baked at 5AM Daily!</p> 
+
+</div> 
+
+ 
+
+<section> 
+
+<div class="menu-grid"> 
+
+ 
+
+<div class="card"> 
+
+<img src="images/bread.jpg" style="width:100%;height:220px;object-fit:cover;display:block"> 
+
+<div class="card-content"> 
+
+<span class="badge" style="background:#ff8c00">BEST SELLER</span> 
+
+<h3>Farmhouse Bread - R18.00</h3> 
+
+<p>700g fresh white loaf.</p> 
+
+<button class="btn-cart" onclick="fillOrder('Farmhouse Bread - R18.00')">🛒 Order Now</button> 
+
+</div> 
+
+</div> 
+
+ 
+
+<div class="card"> 
+
+<img src="images/biscuits.jpg" style="width:100%;height:220px;object-fit:cover;display:block"> 
+
+<div class="card-content"> 
+
+<span class="badge" style="background:#e91e63">KIDS FAV</span> 
+
+<h3>Choc Biscuits - R25 / pack</h3> 
+
+<p>12 crunchy biscuits.</p> 
+
+<button class="btn-cart" onclick="fillOrder('Choc Biscuits - R25')">🛒 Order Now</button> 
+
+</div> 
+
+</div> 
+
+ 
+
+<div class="card"> 
+
+<img src="images/mango.jpg" style="width:100%;height:220px;object-fit:cover;display:block"> 
+
+<div class="card-content"> 
+
+<span class="badge" style="background:#4caf50">MANGO</span> 
+
+<h3>Chocolate Cake - R45</h3> 
+
+<p>500g slice with mango.</p> 
+
+<button class="btn-cart" onclick="fillOrder('Chocolate Cake - R45')">🛒 Order Now</button> 
+
+</div> 
+
+</div> 
+
+ 
+
+<div class="card"> 
+
+<img src="images/brownbread.jpg" style="width:100%;height:220px;object-fit:cover;display:block"> 
+
+<div class="card-content"> 
+
+<span class="badge" style="background:#5d4037">FAMILY RECIPE</span> 
+
+<h3>Brown Bread - R20.00</h3> 
+
+<p>Healthy brown loaf.</p> 
+
+<button class="btn-cart" onclick="fillOrder('Brown Bread - R20.00')">🛒 Order Now</button> 
+
+</div> 
+
+</div> 
+
+ 
+
+<div class="card"> 
+
+<img src="images/butterscones.jpg" style="width:100%;height:220px;object-fit:cover;display:block"> 
+
+<div class="card-content"> 
+
+<span class="badge" style="background:#ff9800">OVEN FRESH</span> 
+
+<h3>Butter Scones - R15 / 6</h3> 
+
+<p>6 soft scones for tea.</p> 
+
+<button class="btn-cart" onclick="fillOrder('Butter Scones - R15 / 6')">🛒 Order Now</button> 
+
+</div> 
+
+</div> 
+
+ 
+
+<div class="card"> 
+
+<img src="images/mangoloafcake.jpg" style="width:100%;height:220px;object-fit:cover;display:block;filter: sepia(30%)"> 
+
+<div class="card-content"> 
+
+<span class="badge" style="background:#795548">NEW</span> 
+
+<h3>Mango Loaf Cake - R120</h3> 
+
+<p>Whole cake - birthday special.</p> 
+
+<button class="btn-cart" onclick="fillOrder('Mango Loaf Cake - R120')">🛒 Order Now</button> 
+
+</div> 
+
+</div> 
+
+ 
+
+</div> 
+
+</section> 
+
+ 
+
+<!-- BUYER ORDER FORM --> 
+
+<section style="background:#fff8f0; padding:40px 20px;"> 
+
+<h2 style="text-align:center;">Place Your Order</h2> 
+
+<p style="text-align:center; margin-bottom:20px;">Enter your name, what you want, and quantity</p> 
+
+ 
+
+<form id="orderForm" style="max-width:500px; margin:0 auto; background:white; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);"> 
+
+<label style="display:block; font-weight:bold; margin-top:10px;">Full Name:</label> 
+
+<input type="text" id="buyerName" required placeholder="e.g. Mhlongo Makungu " style="width:100%; padding:12px; margin:8px 0 15px; border:1px solid #ccc; border-radius:8px;"> 
+
+ 
+
+<label style="display:block; font-weight:bold;">What they want:</label> 
+
+<select id="product" required style="width:100%; padding:12px; margin:8px 0 15px; border:1px solid #ccc; border-radius:8px;"> 
+
+<option value="">-- Select an item --</option> 
+
+<option value="Farmhouse Bread - R18.00">Farmhouse Bread - R18.00</option> 
+
+<option value="Choc Biscuits - R25">Choc Biscuits - R25 / pack</option> 
+
+<option value="Chocolate Cake - R45">Chocolate Cake - R45</option> 
+
+<option value="Brown Bread - R20.00">Brown Bread - R20.00</option> 
+
+<option value="Butter Scones - R15 / 6">Butter Scones - R15 / 6</option> 
+
+<option value="Mango Loaf Cake - R120">Mango Loaf Cake - R120</option> 
+
+</select> 
+
+ 
+
+<label style="display:block; font-weight:bold;">How many items?</label> 
+
+<input type="number" id="quantity" min="1" max="50" required placeholder="e.g. 2" style="width:100%; padding:12px; margin:8px 0 20px; border:1px solid #ccc; border-radius:8px;"> 
+
+ 
+
+<button type="submit" class="btn" style="width:100%; padding:14px; border:none; cursor:pointer; font-size:16px; background:#ff8c00; color:white; border-radius:8px; font-weight:bold;">Submit Order</button> 
+
+ 
+
+<p id="orderMsg" style="text-align:center; margin-top:15px; color:green; font-weight:bold; display:none;"></p> 
+
+</form> 
+
+</section> 
+
+ 
+
+<footer><p>&copy; 2026 Mhlongo Dzonga Bakery | Tzaneen, Limpopo</p></footer> 
+
+ 
+
+<script> 
+
+function fillOrder(item){ 
+
+  document.getElementById('product').value = item; 
+
+  document.getElementById('orderForm').scrollIntoView({behavior: 'smooth'}); 
+
+} 
+
+ 
+
+document.getElementById('orderForm').addEventListener('submit', function(e){ 
+
+  e.preventDefault(); 
+
+  const name = document.getElementById('buyerName').value; 
+
+  const item = document.getElementById('product').value; 
+
+  const qty = document.getElementById('quantity').value; 
+
+  const msg = document.getElementById('orderMsg'); 
+
+  msg.style.display = 'block'; 
+
+  msg.innerText = `Thanks ${name}! Your order for ${qty} x ${item} has been received. We will contact you on WhatsApp, Inkomu!`; 
+
+  this.reset(); 
+
+}); 
+
+</script> 
+
+ 
+
+</body> 
+
+</html> 
