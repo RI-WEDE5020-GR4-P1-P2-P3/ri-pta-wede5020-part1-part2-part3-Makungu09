@@ -45,4 +45,74 @@ My website works properly on different screen sizes.
 @media (max-width: 600px) { 
  .menu-grid { grid-template-columns: 1fr; } 
   nav { flex-direction: column; } 
-}  
+}
+
+## References - Whole Code Sources 
+This website was built using the following references and documentation: 
+### HTML & CSS Structure 
+
+- W3Schools. (2026). HTML Responsive Web Design. https://www.w3schools.com/html/html_responsive.asp 
+
+- W3Schools. (2026). CSS Grid Layout. https://www.w3schools.com/css/css_grid.asp 
+
+- MDN Web Docs. (2026). CSS Flexible Box Layout. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout 
+
+ 
+
+### Responsive Design (Section 4 Requirements) 
+
+- MDN Web Docs. (2026). CSS Media Queries. https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries 
+
+- CSS-Tricks. (2026). A Complete Guide to Grid. https://css-tricks.com/snippets/css/complete-guide-grid/ 
+
+- W3Schools. (2026). CSS object-fit Property - for image resizing. https://www.w3schools.com/css/css3_object-fit.asp 
+
+ 
+
+### Layout Requirements (Section 3) 
+
+- MDN Web Docs. (2026). CSS Hover, Focus, Active pseudo-classes. https://developer.mozilla.org/en-US/docs/Web/CSS/:hover 
+
+- W3Schools. (2026). CSS Transitions and Transform. https://www.w3schools.com/css/css3_transitions.asp 
+
+ 
+
+### Order Form & JavaScript 
+
+- W3Schools. (2026). HTML Forms and JavaScript Form Validation. https://www.w3schools.com/js/js_validation.asp 
+
+- MDN Web Docs. (2026). HTML select element. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select 
+
+ 
+
+### Testing Evidence (Section 5) 
+
+- Google Chrome Developers. (2026). Chrome DevTools Device Mode. https://developer.chrome.com/docs/devtools/device-mode/ 
+
+ 
+
+### Images Used 
+
+- All bakery product images (bread.jpg, biscuits.jpg, mango.jpg, about.jpg, bg.jpg) - Original images from Mhlongo Dzonga Bakery, Tzaneen 
+
+- Screenshots (desktop.png, tablet.png, mobile.png) - Taken by student using Chrome DevTools responsive mode as per Section 5 testing evidence 
+
+ 
+
+### Code Files Referenced in this Project 
+
+- `index.html` - Home page structure based on HTML5 semantic structure [W3Schools HTML5] 
+
+- `about.html` - About page layout 
+
+- `menu.html` - Contains 6 products grid + Buyer Order Form (Name, Product, Quantity) - Custom code 
+
+- `services.html` - Services page 
+
+- `contact.html` - Contact page 
+
+- `style.css` - Main stylesheet containing Flexbox, Grid, media queries (max-width: 900px, 600px), relative units (%, fr, rem), hover/active effects 
+
+- `CHANGELOG.md` - Version history as per Keep a Changelog format [https://keepachangelog.com/] 
+
+- `README.md` - This documentation file 
